@@ -1,0 +1,8 @@
+requests>=2.31.0
+pandas>=2.1.0
+azure-storage-blob>=12.19.0
+python-dotenv>=1.0.0
+faker>=22.0.0
+pyarrow>=14.0.1
+tenacity>=8.2.3
+snowflake-connector-python>=3.6.0

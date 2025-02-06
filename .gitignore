@@ -1,0 +1,39 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+
+# Data directories
+data/
+*_data.csv
+
+# IDE
+.vscode/
+.idea/
+
+# Azure credentials
+*.azureauth
+
+# Logs
+*.log
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Project specific
+config/local.yaml
+setup.sh

@@ -1,0 +1,47 @@
+{
+    "name": "SnowflakeDataIngestion",
+    "properties": {
+        "activities": [
+            {
+                "name": "CopyHUDDataToSnowflake",
+                "type": "Copy",
+                "inputs": [
+                    {
+                        "referenceName": "ParquetHUDSource",
+                        "type": "DatasetReference",
+                        "parameters": {
+                            "container": "raw-data",
+                            "directory": "fair_market_rents_parquet"
+                        }
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "SnowflakeHUDTarget",
+                        "type": "DatasetReference"
+                    }
+                ]
+            },
+            {
+                "name": "CopyCRMDataToSnowflake",
+                "type": "Copy",
+                "inputs": [
+                    {
+                        "referenceName": "CSVSource",
+                        "type": "DatasetReference",
+                        "parameters": {
+                            "container": "raw-data",
+                            "filename": "crm_data.csv"
+                        }
+                    }
+                ],
+                "outputs": [
+                    {
+                        "referenceName": "SnowflakeCRMTarget",
+                        "type": "DatasetReference"
+                    }
+                ]
+            }
+        ]
+    }
+}
