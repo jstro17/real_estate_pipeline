@@ -1,15 +1,4 @@
-from dotenv import load_dotenv
-import os
 from setuptools import setup, find_packages
-
-load_dotenv()  # Loads .env file
-api_key = os.getenv('RAPIDAPI_KEY')  # Access variables
-
-subscription_id = os.getenv('SUBSCRIPTION_ID')
-
-# Use subscription ID in Azure CLI command
-cmd = f"az account set --subscription {subscription_id}"
-subprocess.run(cmd, shell=True)
 
 setup(
     name="real_estate_analytics",
